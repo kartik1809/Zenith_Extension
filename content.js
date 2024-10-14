@@ -10,7 +10,7 @@ const data = {
 
 chrome.storage.local.get(["user_id"], function (result) {
   if (result.user_id) {
-    fetch("http://localhost:3001/ext/tracktext", {
+    fetch("https://hackfest-server-3lwd.onrender.com/ext/tracktext", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
