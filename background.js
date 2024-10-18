@@ -260,8 +260,7 @@ const INTERVAL_SEND_MS = 5* 60 * 1000;
 window.setInterval(() => {
   chrome.storage.local.get(["user_id"], function (result) {
     if (result.user_id) {
-      console.log(domains)
-      // sendDataToServer(domains, result.user_id);
+      sendDataToServer(domains, result.user_id);
     } else {
       console.log("User ID not found in local storage.");
     }
