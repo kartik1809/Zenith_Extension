@@ -8,7 +8,7 @@
 
 1. **Clone or Download** the extension from the repository:
     ```bash
-    git clone https://github.com/yourusername/Zenith.git
+    git clone https://github.com/kartik1809/Zenith_Extension.git
     ```
 2. **Load Extension** into your browser:
     - Open your browser (Chrome/Firefox/Edge).
