@@ -8,14 +8,15 @@ const data = {
   date,
 };
 
-chrome.storage.local.get(["user_id"], function (result) {
-  if (result.user_id) {
-    fetch("https://hackfest-server-3lwd.onrender.com/ext/tracktext", {
+chrome.storage.local.get(["uuid"], function (result) {
+  if (result.uuid) {
+    
+    fetch("https://resolute-land-440916-q3.el.r.appspot.com/ext/tracktext", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({uuid: result.user_id, content: data}),
+      body: JSON.stringify({uuid: result.uuid, content: data}),
     })
       .then((response) => response.json())
       .then((responseData) => {

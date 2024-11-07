@@ -988,34 +988,37 @@ const restoreFromJson = (e) => {
     );
   };
 
-function storeUserId(userId) {
-  chrome.storage.local.set({ user_id: userId }, function () {
-    console.log("User ID stored:", userId);
-  });
-}
+const login = document.querySelector("#login");
 
-const login_btn = document.getElementById("login-button");
-
-login_btn.addEventListener("click", function () {
-  const input = document.getElementById("uuid-login");
-  const userId = input.value;
-  storeUserId(userId);
-  document.getElementById("login-container").style.display = "none";
+login.addEventListener("click", () => {
+  const uuid = document.querySelector("#pass-key").value;
+  chrome.storage.local.set({ uuid: uuid });
+  document.querySelector(".login-div").style.display = "none";
+  document.querySelector(".container").style.display = "block";
+  alert("Login Successful");
 });
 
-function getUserId(callback) {
-  chrome.storage.local.get(["user_id"], function (result) {
-    if (result.user_id) {
-      document.getElementById("login-container").style.display = "none";
-      console.log("User ID retrieved:", result.user_id);
-      callback(result.user_id);
+const authenticate = () => {
+  chrome.storage.local.get(["uuid"], (result) => {
+    if (result.uuid) {
+      console.log("Login Successful");
+      document.querySelector(".login-div").style.display = "none";
+      document.querySelector(".container").style.display = "block";
     } else {
-      document.getElementById("login-container").style.display = "block";
-      console.log("No User ID found in local storage.");
+      console.log("Login Required");
+      document.querySelector(".login-div").style.display = "block";
+      document.querySelector(".container").style.display = "none";
     }
   });
-}
+};
 
-getUserId(function (userId) {
-  console.log("User ID:", userId);
+const logout = document.querySelector("#logout");
+
+logout.addEventListener("click", () => {
+  chrome.storage.local.remove("uuid");
+  document.querySelector(".login-div").style.display = "block";
+  document.querySelector(".container").style.display = "none";
+  alert("Logout Successful");
 });
+
+authenticate();

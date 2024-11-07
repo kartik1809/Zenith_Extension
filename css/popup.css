@@ -870,3 +870,114 @@ html ,body, .container{
   white-space: nowrap;
 }
 
+.login-div{
+  width: 700px;
+  height: 550px;
+  padding: 0px 20px;
+  background: linear-gradient(
+    to bottom right,
+    #1f2937,
+    #1e3a8a
+  );
+}
+
+/* Main container styling */
+.login-div {
+  width: 700px;
+  height: 550px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #1f2937, #1e3a8a);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Headline styling */
+.headline-1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headline-1 h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.headline-1 p {
+  font-size: 18px;
+  color: #cbd5e1; /* Light gray color */
+}
+
+/* Instruction text */
+.inst {
+  font-size: 20px;
+  color: #e2e8f0; /* Slightly lighter gray */
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Login input and button styling */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2d3748; /* Dark gray for input field */
+  color: #ffffff;
+  outline: none;
+}
+
+.button-2 {
+  width: 80%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3d4968; /* Dark blue for button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-2:hover {
+  background-color: #1e3a8a; /* Slightly brighter blue on hover */
+}
+
+/* Link text for "Get Passkey" */
+.login p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.login p a {
+  color: #90cdf4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login p a:hover {
+  text-decoration: underline;
+}
+
+.cta{
+  text-decoration: none;
+  cursor: pointer;
+}

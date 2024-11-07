@@ -21,7 +21,7 @@ const STORAGE_DOMAINS = "domains",
 // Function to send data to the server
 function sendDataToServer(content, uuid) {
   const serverUrl =
-    "https://hackfest-server-3lwd.onrender.com/ext/trackcontent"; 
+    "https://resolute-land-440916-q3.el.r.appspot.com/ext/trackcontent"; 
   fetch(serverUrl, {
     method: "POST",
     headers: {
@@ -31,6 +31,7 @@ function sendDataToServer(content, uuid) {
   })
     .then((response) => response.json())
     .then((responseData) => {
+      console.log({ uuid, content });
       console.log("Data successfully uploaded to server:", responseData);
     })
     .catch((error) => {
@@ -258,9 +259,9 @@ timeIntervals.save = window.setInterval(() => {
 // Send data to the server every 3 minutes (15 * 60 * 1000 ms)
 const INTERVAL_SEND_MS = 5* 60 * 1000;
 window.setInterval(() => {
-  chrome.storage.local.get(["user_id"], function (result) {
-    if (result.user_id) {
-      sendDataToServer(domains, result.user_id);
+  chrome.storage.local.get(["uuid"], function (result) {
+    if (result.uuid) {
+      sendDataToServer(domains, result.uuid);
     } else {
       console.log("User ID not found in local storage.");
     }
