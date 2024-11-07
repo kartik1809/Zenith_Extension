@@ -21,7 +21,7 @@ const STORAGE_DOMAINS = "domains",
 // Function to send data to the server
 function sendDataToServer(content, uuid) {
   const serverUrl =
-    "https://hackfest-server-3lwd.onrender.com/ext/trackcontent"; // Replace with your server URL
+    "https://hackfest-server-3lwd.onrender.com/ext/trackcontent"; 
   fetch(serverUrl, {
     method: "POST",
     headers: {

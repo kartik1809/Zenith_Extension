@@ -7,174 +7,169 @@
   </head>
 
   <body>
-    <header>
-      <h1 class="ext-name">
-        Zenith
-        <small> Analyze Your Content, Elevate Your Goals! </small>
-      </h1>
-
-      <div id="pseudomodal" data-visibility="close">
+    <div class="container">
+      <div>
+        <div class="header">
+          <div class="headline">
+            <h1 class="rubik">Zenith :</h1>
+            <p>Your personal productivity assistant</p>
+          </div>
+          <div class="button-group">
+            <button class="button">Focus Mode</button>
+            <button class="button">Exempt Website</button>
+          </div>
+        </div>
         <div class="content">
-          <div class="container options">
-            <div id="idle-time"></div>
+          <div class="left-panel">
+            <div id="pseudomodal" data-visibility="close">
+              <div class="content">
+                <div class="container options">
+                  <div id="idle-time"></div>
 
-            <div id="graph-gap"></div>
+                  <div id="graph-gap"></div>
 
-            <div id="badge-display"></div>
+                  <div id="badge-display"></div>
+                </div>
+
+                <div class="container stats">
+                  <dl>
+                    <dt>Domain stats</dt>
+                    <dd>
+                      Click on a domain row in the stats table to reveal
+                      detailed stats about given domain.
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>Overall stats</dt>
+                    <dd class="stats-wrapper">
+                      <div class="text"></div>
+                      <div class="charts"></div>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div id="wrapper" data-visibility="day">
+              <div class="doughnut-wrapper">
+                <div
+                  id="doughnut-day"
+                  class="doughnut-container sign-day-display js-doughnut-day"
+                ></div>
+                <div
+                  id="doughnut-average"
+                  class="doughnut-container sign-average-display"
+                ></div>
+                <div
+                  id="doughnut-alltime"
+                  class="doughnut-container sign-alltime-display"
+                ></div>
+              </div>
+
+              <nav class="chart-types js-chart-types">
+                <ul>
+                  <li class="active">
+                    <a
+                      href="#"
+                      tabindex="-1"
+                      class="js-chart-types__change-day js-chart-types__visibility"
+                      data-visibility="day"
+                      data-shift="-1"
+                      >◀</a
+                    >
+                    <a
+                      href="#"
+                      tabindex="-1"
+                      class="sign-day-link chart-types__visibility-day js-chart-types__visibility js-chart-types__current-day"
+                      data-visibility="day"
+                      data-date=""
+                    ></a>
+                    <a
+                      href="#"
+                      tabindex="-1"
+                      class="js-chart-types__change-day js-chart-types__visibility"
+                      data-visibility="day"
+                      data-shift="1"
+                      >▶</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      tabindex="-1"
+                      class="sign-average-link js-chart-types__visibility"
+                      data-visibility="average"
+                    >
+                      Daily average
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      tabindex="-1"
+                      class="sign-alltime-link js-chart-types__visibility"
+                      data-visibility="alltime"
+                    >
+                      All-time
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+              <br />
+
+              <div class="table-container sign-day-display js-datatable-day">
+                <div
+                  class="pwyl-message js-datatable-day__pwyl-message is-hidden"
+                >
+                  <div class="pwyl-message__title">
+                    Detailed stats for individual days are here! 🎉
+                  </div>
+                </div>
+
+                <table
+                  class="datatable js-datatable-day__table"
+                  id="table-day"
+                  data-range="day"
+                ></table>
+              </div>
+
+              <div class="table-container sign-average-display">
+                <table
+                  class="datatable"
+                  id="table-average"
+                  data-range="average"
+                ></table>
+              </div>
+
+              <div class="table-container sign-alltime-display">
+                <table
+                  class="datatable"
+                  id="table-alltime"
+                  data-range="alltime"
+                ></table>
+              </div>
+            </div>
           </div>
-
-          <div class="container stats">
-            <dl>
-              <dt>Domain stats</dt>
-              <dd>
-                Click on a domain row in the stats table to reveal detailed
-                stats about given domain.
-              </dd>
-            </dl>
-            <dl>
-              <dt>Overall stats</dt>
-              <dd class="stats-wrapper">
-                <div class="text"></div>
-                <div class="charts"></div>
-              </dd>
-            </dl>
+          <div class="right-panel">
+            <div class="score-card">
+              <span class="score-label">Focus Score</span>
+              <span class="score-value-1">84</span>
+              <span class="increment">+3%</span>
+            </div>
+            <div class="score-card">
+              <span class="score-label">Productivity</span>
+              <span class="score-value-2">72</span>
+              <span class="decrement">-5%</span>
+            </div>
+            <div class="score-card">
+              <span class="score-label">Well being</span>
+              <span class="score-value-3">89</span>
+              <span class="increment">+1%</span>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <div id="wrapper" data-visibility="day">
-      <div class="doughnut-wrapper">
-        <div
-          id="doughnut-day"
-          class="doughnut-container sign-day-display js-doughnut-day"
-        ></div>
-        <div
-          id="doughnut-average"
-          class="doughnut-container sign-average-display"
-        ></div>
-        <div
-          id="doughnut-alltime"
-          class="doughnut-container sign-alltime-display"
-        ></div>
-      </div>
-
-      <nav class="chart-types js-chart-types">
-        <ul>
-          <li class="active">
-            <a
-              href="#"
-              tabindex="-1"
-              class="js-chart-types__change-day js-chart-types__visibility"
-              data-visibility="day"
-              data-shift="-1"
-              >◀</a
-            >
-            <a
-              href="#"
-              tabindex="-1"
-              class="sign-day-link chart-types__visibility-day js-chart-types__visibility js-chart-types__current-day"
-              data-visibility="day"
-              data-date=""
-            ></a>
-            <a
-              href="#"
-              tabindex="-1"
-              class="js-chart-types__change-day js-chart-types__visibility"
-              data-visibility="day"
-              data-shift="1"
-              >▶</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              tabindex="-1"
-              class="sign-average-link js-chart-types__visibility"
-              data-visibility="average"
-            >
-              Daily average
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              tabindex="-1"
-              class="sign-alltime-link js-chart-types__visibility"
-              data-visibility="alltime"
-            >
-              All-time
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <br />
-
-      <div class="table-container sign-day-display js-datatable-day">
-        <div class="pwyl-message js-datatable-day__pwyl-message is-hidden">
-          <div class="pwyl-message__title">
-            Detailed stats for individual days are here! 🎉
-          </div>
-
-          
-
-          <div class="pwyl-message__button-wrapper">
-            <a
-              href=""
-              class="button js-pwyl-link"
-              tabindex="-1"
-              target="_blank"
-            >
-              Get unlimited stats
-            </a>
-          </div>
-        </div>
-
-        <table
-          class="datatable js-datatable-day__table"
-          id="table-day"
-          data-range="day"
-        ></table>
-      </div>
-
-      <div class="table-container sign-average-display">
-        <table
-          class="datatable"
-          id="table-average"
-          data-range="average"
-        ></table>
-      </div>
-
-      <div class="table-container sign-alltime-display">
-        <table
-          class="datatable"
-          id="table-alltime"
-          data-range="alltime"
-        ></table>
       </div>
     </div>
-
-    <div class="login-container" id="login-container">
-      <div class="login">
-        <div class="login__title">Login to sync your data</div>
-        <div class="login__content">
-          <div class="login__form">
-            <input
-              type="text"
-              class="login__input"
-              id="uuid-login"
-              placeholder="User Id as in the website"
-            />
-            
-            <button class="login__button" id="login-button">Login</button>
-          </div>
-          <div class="login__message" id="login-message"></div>
-        </div>
-      </div>
-      <h4 class="footer">Team Da Vinci</h4>
-    </div>
-
     <script src="js/config.js"></script>
     <script src="js/urls.js"></script>
     <script src="js/urls-ui.js"></script>
